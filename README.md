@@ -30,7 +30,7 @@ family-print/
 └── build.gradle                           # AGP 8.2 / compileSdk 33 / JDK 17
 ```
 
-> **服务端说明**：本仓库仅包含 Android 客户端。配套的打印服务（HTTP API + IPP 桥接）需自行部署，客户端内通过「设置 → 服务地址 / 访问令牌」配置。
+> **服务端说明**：本仓库包含 Android 客户端（`app/`）与服务端参考实现（`server/`，PHP + CUPS + LibreOffice + ImageMagick）。服务端需自行部署，客户端内通过「设置 → 服务地址 / 访问令牌」配置。
 >
 > - 后端 API 协议：[docs/API.md](docs/API.md)
 > - 部署指南：[docs/DEPLOY.md](docs/DEPLOY.md)
