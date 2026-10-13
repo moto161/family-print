@@ -31,6 +31,10 @@ family-print/
 ```
 
 > **服务端说明**：本仓库仅包含 Android 客户端。配套的打印服务（HTTP API + IPP 桥接）需自行部署，客户端内通过「设置 → 服务地址 / 访问令牌」配置。
+>
+> - 后端 API 协议：[docs/API.md](docs/API.md)
+> - 部署指南：[docs/DEPLOY.md](docs/DEPLOY.md)
+> - 参考实现：`server/` 目录（PHP + CUPS + LibreOffice + ImageMagick）
 
 ## 构建要求
 
@@ -60,6 +64,25 @@ app/build/outputs/apk/debug/app-debug.apk
 3. **打印机 IP**：局域网直连模式下的打印机地址
 
 仓库中的 `192.0.2.100` / `192.168.1.100` 均为文档示例地址（RFC 5737 / RFC 1918 常见示例），请替换为你自己的服务地址。
+
+### 如何修改编译期默认地址
+
+App 内置的默认服务地址写在 `app/src/main/java/com/family/print/PrintApiClient.java`
+（`getPrintUrl()` 默认 `http://192.0.2.100:8765/index.php`），字符串资源也在
+`app/src/main/res/values/strings.xml`。若你希望编译出的安装包默认指向自己的服务，
+修改这两处后重新构建即可；也可在 App「设置」页随时覆盖，无需重编。
+
+## 后端服务部署
+
+本项目是客户端，打印能力依赖你自建的打印服务。两套资料帮助你从零搭起：
+
+- **[后端 API 协议 docs/API.md](docs/API.md)**：客户端实际调用的 HTTP 接口契约
+  （健康检查 / 预览 / 打印提交 / 队列 / 改打印机 IP / 版本检查），可据此实现任意语言后端。
+- **[部署指南 docs/DEPLOY.md](docs/DEPLOY.md)**：PHP 参考实现的运行依赖、目录布局、
+  令牌生成、nginx 安全配置、关键配置项与排错。
+
+> 仓库中的默认服务地址为占位符（`192.0.2.100`），**编译出的安装包默认无法直接联网打印**，
+> 需按上述文档部署你自己的后端并在 App 内填写地址。
 
 ## 安全设计
 
