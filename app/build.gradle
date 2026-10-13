@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.application'
+}
+
+// v1.82：让 deprecation 警告显式出现在编译日志（deprecated API 迁移清单）
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs << '-Xlint:deprecation'
+}
+
+android {
+    namespace 'com.family.print'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.family.print"
+        minSdk 24
+        targetSdk 33
+        versionCode 84
+        versionName "1.84"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    // 二维码：core 生成（分享配置），embedded 提供扫码 CaptureActivity（扫码导入）
+    implementation 'com.google.zxing:core:3.5.3'
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+}

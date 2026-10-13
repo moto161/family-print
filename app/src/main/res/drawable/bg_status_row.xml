@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 连接状态行：圆角浅底（v1.84 美化，替换直角色块） -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?attr/colorSurfaceVariant" />
+    <corners android:radius="10dp" />
+</shape>

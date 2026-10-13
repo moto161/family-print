@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  拍照直打输出：getCacheDir()/camera/photo_*.jpg（MainActivity.startCameraCapture）
+  自更新 APK：getExternalCacheDir()/update.apk（SettingsActivity.installApk）
+
+  ⚠️ v1.83 修复（2026-10-09 线上事故）：v1.79 曾把 update_apk 收窄成 path="update.apk"，
+  使 FileProvider 的 root 与文件本身完全重合。androidx.core 1.9.0 的
+  SimplePathStrategy.getUriForFile 对非"/"结尾的 rootPath 一律执行
+  substring(rootPath.length() + 1)（无 equals 保护，1.13.1 同样如此），
+  root==文件时直接越界 → StringIndexOutOfBoundsException "length=66; index=67"
+  → 应用内更新 100% 崩在 installApk。
+  因此 external-cache-path 的 path 禁止指到具体文件，最小合法值是 ""（= cache 目录本身，
+  该目录实际只有 update.apk 一个用途；拍照用的是内部 cache-path camera）。
+-->
+<paths>
+    <cache-path name="camera" path="camera/" />
+    <external-cache-path name="update_apk" path="" />
+</paths>

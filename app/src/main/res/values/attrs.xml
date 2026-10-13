@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义主题属性：成功 / 警告 语义色（Material 无原生 success 属性） -->
+    <attr name="colorSuccess" format="color" />
+    <attr name="colorOnSuccess" format="color" />
+    <attr name="colorSuccessContainer" format="color" />
+    <attr name="colorWarning" format="color" />
+    <attr name="colorWarningContainer" format="color" />
+</resources>

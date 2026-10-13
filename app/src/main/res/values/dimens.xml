@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 圆角系统（两级分明） -->
+    <dimen name="radius_card">16dp</dimen>
+    <dimen name="radius_button">4dp</dimen>
+    <dimen name="radius_thumbnail">8dp</dimen>
+    <dimen name="radius_pill">999dp</dimen>
+
+    <!-- 间距系统 -->
+    <dimen name="space_xxs">4dp</dimen>
+    <dimen name="space_xs">8dp</dimen>
+    <dimen name="space_sm">12dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">20dp</dimen>
+    <dimen name="space_xl">24dp</dimen>
+    <dimen name="space_xxl">32dp</dimen>
+
+    <!-- 字体大小 -->
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_title_sm">16sp</dimen>
+    <dimen name="text_title_md">18sp</dimen>
+    <dimen name="text_title_lg">22sp</dimen>
+
+    <!-- 组件尺寸 -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="input_height">48dp</dimen>
+    <dimen name="list_item_height">56dp</dimen>
+    <!-- 触摸目标必须 48dp（DESIGN.md 第9节）；图标靠 padding 收小，点击区不缩水 -->
+    <dimen name="icon_button_size">48dp</dimen>
+    <dimen name="icon_button_padding">12dp</dimen>
+
+    <!-- 缩略图 -->
+    <dimen name="thumbnail_width">120dp</dimen>
+    <dimen name="thumbnail_height">160dp</dimen>
+
+    <!-- 兼容旧名称 -->
+    <dimen name="spacing_small">@dimen/space_xxs</dimen>
+    <dimen name="spacing_medium">@dimen/space_xs</dimen>
+    <dimen name="spacing_large">@dimen/space_md</dimen>
+    <dimen name="radius_small">@dimen/radius_button</dimen>
+    <dimen name="radius_medium">@dimen/radius_thumbnail</dimen>
+    <dimen name="radius_large">@dimen/radius_card</dimen>
+    <dimen name="text_small">@dimen/text_caption</dimen>
+    <dimen name="text_medium">@dimen/text_body</dimen>
+    <dimen name="text_large">@dimen/text_title_sm</dimen>
+
+    <!-- 状态文字 -->
+    <dimen name="status_padding_top">60dp</dimen>
+</resources>

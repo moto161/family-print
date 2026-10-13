@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 文件名提示区：虚线边框卡片，暗示"待放入文件"（v1.84 美化） -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?attr/colorSurface" />
+    <corners android:radius="10dp" />
+    <stroke
+        android:width="1dp"
+        android:color="?attr/colorOutline"
+        android:dashWidth="4dp"
+        android:dashGap="4dp" />
+</shape>

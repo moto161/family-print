@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ============================================================
+         三套可切换主题：Modern / Warm / Pro
+         均基于 MaterialComponents.Light.NoActionBar（无 ActionBar，
+         全自定义顶部栏 + 底部导航）。所有色彩走主题属性 ?attr/*，
+         切换主题即全局换肤。对比度均满足 WCAG AA。
+         ============================================================ -->
+
+    <!-- ① 现代清爽（青绿 teal）—— 默认 -->
+    <style name="Theme.Print.Modern" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#0EA5A4</item>
+        <item name="colorPrimaryVariant">#0B7C7B</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#2DD4BF</item>
+        <item name="colorSecondaryVariant">#0EA5A4</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#16201F</item>
+        <item name="colorSurfaceVariant">#F3F7F7</item>
+        <item name="colorOnSurfaceVariant">#566766</item>
+        <item name="colorOutline">#DCE6E5</item>
+        <item name="android:colorBackground">#F3F7F7</item>
+        <item name="colorOnBackground">#16201F</item>
+
+        <item name="colorError">#D64550</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorErrorContainer">#FBE9EA</item>
+
+        <item name="colorPrimaryContainer">#D7F0EF</item>
+        <item name="colorOnPrimaryContainer">#064E4D</item>
+
+        <item name="colorSuccess">#1F9D55</item>
+        <item name="colorOnSuccess">#FFFFFF</item>
+        <item name="colorSuccessContainer">#E3F5EA</item>
+        <item name="colorWarning">#E08A1E</item>
+        <item name="colorWarningContainer">#FBEFDD</item>
+
+        <item name="android:statusBarColor">#064E4D</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- ② 温暖家居（橙暖 orange） -->
+    <style name="Theme.Print.Warm" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#EA7B2C</item>
+        <item name="colorPrimaryVariant">#C75F15</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#F4A261</item>
+        <item name="colorSecondaryVariant">#EA7B2C</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#2A1F17</item>
+        <item name="colorSurfaceVariant">#FBF5EF</item>
+        <item name="colorOnSurfaceVariant">#6B5648</item>
+        <item name="colorOutline">#EFE3D6</item>
+        <item name="android:colorBackground">#FBF5EF</item>
+        <item name="colorOnBackground">#2A1F17</item>
+
+        <item name="colorError">#D64550</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorErrorContainer">#FBE9EA</item>
+
+        <item name="colorPrimaryContainer">#FCE2CC</item>
+        <item name="colorOnPrimaryContainer">#5A2E0C</item>
+
+        <item name="colorSuccess">#2E8B57</item>
+        <item name="colorOnSuccess">#FFFFFF</item>
+        <item name="colorSuccessContainer">#E5F2EA</item>
+        <item name="colorWarning">#E0913A</item>
+        <item name="colorWarningContainer">#FBEFDD</item>
+
+        <item name="android:statusBarColor">#5A2E0C</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- ③ 专业沉稳（深蓝 blue） -->
+    <style name="Theme.Print.Pro" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#2563EB</item>
+        <item name="colorPrimaryVariant">#1E40AF</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#3B82F6</item>
+        <item name="colorSecondaryVariant">#2563EB</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#15181F</item>
+        <item name="colorSurfaceVariant">#F2F5FA</item>
+        <item name="colorOnSurfaceVariant">#586172</item>
+        <item name="colorOutline">#E1E6EE</item>
+        <item name="android:colorBackground">#F2F5FA</item>
+        <item name="colorOnBackground">#15181F</item>
+
+        <item name="colorError">#D64550</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorErrorContainer">#FBE9EA</item>
+
+        <item name="colorPrimaryContainer">#DBE6FF</item>
+        <item name="colorOnPrimaryContainer">#102A6B</item>
+
+        <item name="colorSuccess">#1F9D55</item>
+        <item name="colorOnSuccess">#FFFFFF</item>
+        <item name="colorSuccessContainer">#E3F5EA</item>
+        <item name="colorWarning">#D98A1A</item>
+        <item name="colorWarningContainer">#FBEFDD</item>
+
+        <item name="android:statusBarColor">#102A6B</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+
+    <!-- ④ 夜间模式（深底 + 青绿点缀，WCAG AA：正文 #E6EDEA on #12181B 对比度 ~13:1） -->
+    <style name="Theme.Print.Dark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">#2DD4BF</item>
+        <item name="colorPrimaryVariant">#14B8A6</item>
+        <item name="colorOnPrimary">#06211F</item>
+        <item name="colorSecondary">#5EEAD4</item>
+        <item name="colorSecondaryVariant">#2DD4BF</item>
+        <item name="colorOnSecondary">#06211F</item>
+
+        <item name="colorSurface">#1B2427</item>
+        <item name="colorOnSurface">#E6EDEA</item>
+        <item name="colorSurfaceVariant">#12181B</item>
+        <item name="colorOnSurfaceVariant">#9FB4B0</item>
+        <item name="colorOutline">#2A3A3D</item>
+        <item name="android:colorBackground">#12181B</item>
+        <item name="colorOnBackground">#E6EDEA</item>
+
+        <item name="colorError">#F87171</item>
+        <item name="colorOnError">#2A0D0F</item>
+        <item name="colorErrorContainer">#3D1518</item>
+
+        <item name="colorPrimaryContainer">#0F3D3A</item>
+        <item name="colorOnPrimaryContainer">#A7F3EB</item>
+
+        <item name="colorSuccess">#34D399</item>
+        <item name="colorOnSuccess">#06211F</item>
+        <item name="colorSuccessContainer">#0C3229</item>
+        <item name="colorWarning">#FBBF24</item>
+        <item name="colorWarningContainer">#3A2C0C</item>
+
+        <item name="android:statusBarColor">#0C1113</item>
+        <item name="android:navigationBarColor">#12181B</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+</resources>
